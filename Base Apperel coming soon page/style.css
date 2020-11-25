@@ -5,8 +5,7 @@
 }
 
 body{
-    background-image: url('images/bg-pattern-desktop.svg');
-    background-size: cover;
+    background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
     font-family: 'Josefin Sans', sans-serif;
     margin: 0;
 }
@@ -19,6 +18,13 @@ body{
 .left{
     padding: 0 80px; /* 0 40px*/
     width: 60%;
+    background-image: url('images/bg-pattern-desktop.svg');
+    background-size: cover;
+    background-position: center center;
+}
+
+.inner-container{
+    max-width: 450px;
 }
 
 .right{
@@ -28,12 +34,16 @@ body{
 .bg-image{
     background-image: url('images/hero-desktop.jpg');
     background-size: cover;
-    background-position: center center;
+    background-position: center top;
 }
 
 .logo{
-    margin: 33px 0 70px 0;  /**60px 0/     
-    /*width: 200px*/
+    margin: 60px 0;
+    width: 200px;
+}
+
+.bg-mobile{
+    display: none;
 }
 
 h1{
@@ -41,6 +51,7 @@ h1{
     font-size: 60px;
     text-transform: uppercase;
     letter-spacing: 10px;
+    margin: 0;
     line-height: 1.1;
 }
 
@@ -52,20 +63,158 @@ h1 span{
 p{
     color:  hsl(0, 36%, 70%);
     line-height: 25px;
+    margin: 30px 0
 }
 
 form{
-
+    position: relative;
 }
 
 input{
+    background-color: transparent;
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 50px;
+    font-size: 16px;
+    padding: 15px 30px;
+    height: 55px;
+    width: 100%;
+    opacity: 0.5;
+}
 
+input:focus{
+    box-shadow: 0px 0px 10px hsla(0, 36%, 70%, 0.9);
+    outline: none;
+    border-width: 2px;
+}
+
+::placeholder{
+    color: hsl(0, 36%, 70%);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+form.error input{
+    border: 2px solid hsla(0, 36%, 70%, 0.9);
+}
+
+form.success input{
+    border: 3px solid #00b712;
+}
+
+form.success button{
+    background-image: linear-gradient(315deg, #00b712 0%, #5aff15 74%);
 }
 
 button{
+    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    padding: 15px;
+    box-shadow: 2px 3px 10px hsla(0, 36%, 70%, 0.9);
+    border-radius: 50px;
+    border: none;
+    width: 100px;
+    cursor: pointer;
+    transition: opacity 300ms ease-in-out;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
 
+button:focus{
+    outline: none;
+}
+
+button:hover{
+    opacity: 0.9;
+    background-image: linear-gradient(135deg, hsl(0, 90%, 96%), hsl(0, 84%, 80%));
+}
+
+.error-icon{
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 110px;
+}
+
+form.error .error-icon{
+    display: block;
 }
 
 small{
+    display: none;
+    margin-top: 10px;
+    margin-left: 30px;
+    color: hsl(0, 93%, 68%);
+}
 
+form.error small{
+    display: block;
+}
+
+
+/*Responsive section*/
+
+/*Tablet*/
+@media screen and (max-width: 768px){
+    .inner-container{      
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .bg-mobile{
+        display: block;
+        margin-left: -80px;
+        margin-right: -80px;
+        width: calc(100% + 160px);
+}
+
+    h1{
+        font-size: 50px;
+    }
+
+    .logo{
+        margin: 50px 0;    
+        width: 150px;
+}
+
+    .left{
+        width: 100%;
+    }
+
+    .right{
+        display: none;
+    }
+}
+
+
+/*Mobile*/
+@media screen and (max-width: 600px){
+
+    .inner-container{
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .bg-mobile{
+        display: block;
+        margin-left: -80px;
+        margin-right: -80px;
+        width: calc(100% + 160px);
+}
+
+    h1{
+        font-size: 40px;
+    }
+
+    .logo{
+        margin: 30px 0;    
+        width: 100px;
+}
+
+    .left{
+        width: 100%;
+    }
+
+    .right{
+        display: none;
+    }
 }
