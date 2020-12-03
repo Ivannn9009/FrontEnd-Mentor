@@ -5,6 +5,167 @@
 }
 
 body{
+    background-color: hsl(0, 100%, 74%);
+    background-image: url(./images/bg-intro-desktop.png);
     font-family: 'Poppins', sans-serif;
+    color: white;
     font-size: 16px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.container > div{
+    flex: 1;
+    padding: 0 60px;
+}
+
+h1{
+    font-size: 40px;
+    line-height: 50px;
+}
+
+p{
+    opacity: 0.8;
+    font-size: 15px;
+}
+
+.box{
+    background-color: white;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 0 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.box p{
+    margin: 0;
+}
+
+.box-blue{
+    background-color: hsl(248, 32%, 49%);
+    padding: 15px;
+}
+.form-control{
+    position: relative;
+    margin-bottom: 30px
+}
+
+.form-control small{
+    position: absolute;
+    color: hsl(0, 100%, 74%);
+    font-weight: 600;
+    bottom: -24px;
+    right: 0;
+    opacity: 0;
+    text-align: right;
+}
+
+input{
+    display: block;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1.3px solid hsl(246, 25%, 77%);
+    padding: 15px 25px;
+    border-radius: 5px;
+}
+
+.form-control.error input{
+    color: hsl(0, 100%, 74%);                   /*For Javascript*/
+    border: 1px solid hsl(0, 100%, 74%);
+}
+
+.form-control.error input::placeholder{
+    color: hsl(0, 100%, 74%);
+}
+
+input:focus{
+    border: 1.3px solid hsl(248, 32%, 49%);
+    outline: none;
+}
+
+.form-control img{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    opacity: 0;
+    height: 20px;
+}
+
+.form-control.error img{
+    opacity: 1;
+}
+
+button{
+    background-color: hsl(154, 59%, 51%);
+    display: block;
+    width: 100%;
+    padding: 10px;  
+    border: 1px solid hsl(154, 59%, 45%);
+    border-bottom-width: 3px;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:focus{
+    outline: none;
+}
+
+button:active{
+    background-color: hsl(154, 92%, 36%);
+    transform: translateY(2px);
+}
+
+.form-control small{
+    opacity: 0;
+}
+
+.form-control.error small{
+    opacity: 1;
+}
+
+small{
+    display: block;
+    color: hsl(246, 25%, 77%);
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+small a{
+    color: hsl(0, 100%, 74%);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px){
+
+    h1{
+        margin-top: 80px;
+        text-align: center;
+    }
+
+    p{
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
 }
