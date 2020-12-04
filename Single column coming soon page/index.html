@@ -6,27 +6,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+
+  <script defer src="script.js"></script>
 
   <title>Frontend Mentor | Ping coming soon page</title>
 
 </head>
 
 <body>
+  <main>
+    <img src="./images/logo.svg" alt="logo" class="logo">
+    <h1>We are launching <span>soon!</span></h1>
 
-  <h1>We are launching soon!</h1>
+    <h2>Subscribe and get notified</h2>
+    <form id="form">
 
-  <p>Subscribe and get notified</p>
+      <div class="form-left">
+        <input type="email" id="email" placeholder="Your email address...">
+        <small class="error">Please provide a valid email address</small>
+      </div>
 
-  <button>Notify Me</button>
+      <button>Notify Me</button>
+    </form>
 
-  <small>&copy; Copyright Ping. All rights reserved.</small>
+    <img src="./images/illustration-dashboard.png" alt="illustration" class="illustration">
 
-  <footer>
-    <p class="attribution">
-      Challenge by. Coded by <a href="#">Ivan Georgiev</a>.
-    </p>
-  </footer>
+    <footer>
+      <ul class="social-list">
+        <li>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </li>
+
+        <li>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </li>
+
+        <li>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </li>
+      </ul>
+
+      <p>&copy; Copyright Ping. All rights reserved.</p>
+      <!-- <p class="attribution">
+        Challenge by. Coded by <a href="#">Ivan Georgiev</a>.
+      </p> -->
+    </footer>
+  </main>
+
 </body>
 
 </html>
