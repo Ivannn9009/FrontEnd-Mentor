@@ -17,10 +17,10 @@
 
   <header>
     <div class="container">
-      <nav>
+      <nav class="flex">
 
         <img class="logo" src="images/logo.svg" alt="logo">
-        <button class="btn btn-secondary">Try It Free</button>
+        <button class="btn">Try It Free</button>
 
       </nav>
       <div class="flex">
@@ -31,10 +31,12 @@
           <p>Huddle re-imagines the way we build communities. You have a voice, but so does your audience.
             Create connections with your users as you engage in genuine discussion.</p>
 
-          <button>Get Started For Free</button>
+          <button class="btn btn-primary">Get Started For Free</button>
         </div>
 
-        <img src="images/illustration-mockups.svg" alt="mockups">
+        <div>
+          <img src="images/illustration-mockups.svg" alt="mockups">
+        </div>
 
       </div>
 
@@ -44,62 +46,95 @@
   <main>
     <div class="container">
 
-      <div class="box flex">
+      <div class="box flex reverse">
         <div>
-          <h2>Grow Together</h2>
+          <h3>Grow Together</h3>
           <p>Generate meaningful discussions with your audience and build a strong, loyal community.
             Think of the insightful conversations you miss out on with a feedback form.</p>
         </div>
-        <img src="images/illustration-grow-together.svg" alt="grow-together">
+        <div>
+          <img src="images/illustration-grow-together.svg" alt="grow-together">
+        </div>
       </div>
 
       <div class="box flex">
-        <img src="images/illustration-flowing-conversation.svg" alt="">
         <div>
-          <h2>Flowing Conversations</h2>
+          <img src="images/illustration-flowing-conversation.svg" alt="">
+        </div>
+        <div>
+          <h3>Flowing Conversations</h3>
           <p>You wouldn't paginate a conversation in real life, so why do it online? Our threads
             have just-in-time loading for a more natural flow.</p>
         </div>
       </div>
 
-      <div class="box flex">
+      <div class="box flex reverse">
         <div>
-          <h2>Your Users</h2>
+          <h3>Your Users</h3>
           <p>It takes no time at all to integrate Huddle with your app's authentication solution.
             This means, once signed in to your app, your users can start chatting immediately.</p>
         </div>
-        <img src="images/illustration-your-users.svg" alt="your-users">
+        <div>
+          <img src="images/illustration-your-users.svg" alt="your-users">
+        </div>
       </div>
 
     </div>
   </main>
 
-  Ready To Build Your Community?
+  <div class="container center">
+    <div class="box small-box">
+      <h2>Ready To Build Your Community?</h2>
 
-  Get Started For Free
-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-  incididunt ut labore et dolore magna aliqua
-
-  +1-543-123-4567
-  example@huddle.com
-
-  About Us
-  What We Do
-  FAQ
-
-  Career
-  Blog
-  Contact Us
-
-  &copy; Copyright 2018 Huddle. All rights reserved.
+      <button class="btn btn-primary btn-big">Get Started For Free</button>
+    </div>
+  </div>
 
   <footer>
-    <p>
-      Challenge by Frontend Mentor</a>.
-      Coded by <a href="#">Ivan Georgiev</a>.
-    </p>
+    <div class="container">
+      <img class="footer-logo" src="images/footer-logo.svg" alt="footer-logo">
+
+      <div class="flex align-start">
+
+        <ul class="footer-text">
+          <li>
+            <i class="fas fa-map-marker-alt"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet,
+            consectetur<br>&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            adipiscing elit, sed do eiusmod tempor<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            incididunt ut labore et dolore magna aliqua
+          </li>
+          <li><i class="fas fa-phone-volume"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+1-543-123-4567</li>
+          <li><i class="fas fa-envelope"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;example@huddle.com</li>
+        </ul>
+
+        <ul>
+          <li>About Us</li>
+          <li>What We Do</li>
+          <li>FAQ</li>
+        </ul>
+
+        <ul>
+          <li>Career</li>
+          <li>Blog</li>
+          <li>Contact Us</li>
+        </ul>
+
+        <ul class="social-media">
+          <li><a class="circle" href="#"><i class="fab fa-twitter"></i></a></li>
+          <li><a class="circle" href="#"><i class="fab fa-instagram"></i></a></li>
+          <li><a class="circle" href="#"><i class="fab fa-facebook-f"></i></a></li>
+        </ul>
+
+      </div>
+      <p>&copy; Copyright 2018 Huddle. All rights reserved.<br>
+        Challenge by Frontend Mentor</a>.
+        Coded by <a class="private" href="#">Ivan Georgiev</a>.
+      </p>
+    </div>
+
   </footer>
+
 </body>
 
 </html>
