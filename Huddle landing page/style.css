@@ -80,7 +80,6 @@ img{
 
 .flex > div {
     float: 1;
-    margin-right: 50px;
 }
 
 .align-start{
@@ -100,6 +99,11 @@ nav{
     justify-content: space-between;
     align-items: center;
     margin-bottom: 40px;
+}
+
+.header-img{
+    width: 90%;
+    margin-left: 10%;
 }
 
 .box{
@@ -185,6 +189,11 @@ footer p{
 
     nav.flex{
         flex-direction: row;
+    }
+
+    .header-img{
+        width: 100%;
+        margin-left: 0;
     }
 
     .flex{
