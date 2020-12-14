@@ -15,56 +15,105 @@
 </head>
 
 <body>
-  <div class="container">
-    <header>
-      <img src="images/logo.svg" alt="logo">
+  <header>
+    <div class="container">
       <nav>
+        <img src="images/logo.svg" alt="logo">
         <ul>
-          <li>Features</li>
-          <li>Team</li>
-          <li>Sign In</li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Sign In</a></li>
         </ul>
       </nav>
 
-      <h1>All your files in one secure location, accessible anywhere.</h1>
-      <p>Fylo stores your most important files in one secure location.
-        Access them wherever you need, share and collaborate with friends,
-        family, and co-workers.</p>
-      <input type="text">
-      <button>Get Started</button>
-    </header>
-  </div>
+      <div class="flex">
 
+        <div>
+          <h1>All your files in one secure location, accessible anywhere.</h1>
+          <p>Fylo stores your most important files in one secure location.
+            Access them wherever you need, share and collaborate with friends,
+            family, and co-workers.</p>
+          <form>
+            <input type="email" placeholder="Enter your email...">
+            <button>Get Started</button>
+          </form>
+        </div>
 
+        <div>
+          <img src="images/illustration-1.svg" alt="illustration-1">
+        </div>
 
+      </div>
+    </div>
+  </header>
 
+  <section class="light-blueish">
+    <div class="container">
+      <div class="flex">
 
+        <div>
+          <h2>Stay productive, wherever you are</h2>
+          <p> Never let location be an issue when accessing your files. Fylo has you
+            covered for all of your file storage needs.</p>
+          <p>Securely share files and folders with friends, family and colleagues for
+            live collaboration. No email attachments required!</p>
 
+          <a class="small-text" href="#">See how Fylo works
+            <img src="images/icon-arrow.svg" alt="icon-arrow">
+          </a>
 
+          <div class="testimonial-box">
+            <img src="images/icon-quotes.svg" alt="quotes-image">
+            <p>
+              Fylo has improved our team productivity by an order of magnitude. Since
+              making the switch our team has become a well-oiled collaboration machine.
+            </p>
 
+            <div class="user-info">
 
-  Stay productive, wherever you are
+              <div>
+                <img src="images/avatar-testimonial.jpg" alt="avatar">
+              </div>
 
-  Never let location be an issue when accessing your files. Fylo has you
-  covered for all of your file storage needs.
+              <div>
+                <h4>Kyle Burton</h4>
+                <small>Founder & CEO, Huddle</small>
+              </div>
 
-  Securely share files and folders with friends, family and colleagues for
-  live collaboration. No email attachments required!
+            </div>
+          </div>
+        </div>
 
-  See how Fylo works
+        <div>
+          <img src="images/illustration-2.svg" alt="illustration-2">
+        </div>
 
-  Fylo has improved our team productivity by an order of magnitude. Since
-  making the switch our team has become a well-oiled collaboration machine.
+      </div>
+    </div>
+  </section>
 
-  Kyle Burton
-  Founder & CEO, Huddle
+  <section class="blueish">
+    <div class="container">
+      <div class="flex">
 
-  Get early access today
+        <div>
+          <h2>Get early access today</h2>
+          <p>It only takes a minute to sign up and our free starter tier is extremely generous.
+            If you have any questions, our support team would be happy to help you.</p>
+        </div>
 
-  It only takes a minute to sign up and our free starter tier is extremely generous.
-  If you have any questions, our support team would be happy to help you.
+        <div>
+          <form>
+            <input type="email" placeholder="email@example.com">
+            <button>Get Started For Free</button>
+          </form>
+        </div>
 
-  Get Started For Free
+      </div>
+    </div>
+  </section>
+
+  <!--TODO: ADD FOOTER FROM THE OTHER PROJECT-->
 
   Phone: +1-543-123-4567
   example@fylo.com
