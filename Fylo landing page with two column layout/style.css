@@ -38,7 +38,12 @@ img{
     flex-wrap: wrap;
 }
 
-.flex > div{
+.align-start{
+    align-items: flex-start;
+}
+
+.flex > div,
+.flex > ul{
     flex: 1;
 }
 
@@ -133,6 +138,12 @@ button{
     color: hsl(170, 45%, 43%);
     text-decoration: none;
     position: relative; 
+    transition: ease-in-out 300ms;
+}
+
+.small-text:hover{
+    opacity: 0.4;
+    transition: ease-in-out 300ms;
 }
 
 .small-text::before{
@@ -212,4 +223,173 @@ button{
 .blueish form button{
     margin: 20px 0;
     width: 50%;
+}
+
+            /*Footer section*/
+
+footer{
+    background-color: hsl(243, 87%, 12%);
+    color: white;
+    padding: 40px 0;
+}
+
+footer ul{
+    list-style-type: none;
+}
+
+footer ul li{
+    margin-bottom: 10px;
+}
+
+.footer-text{
+    padding: 0;
+}
+
+footer .social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .circle{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+    color: white;
+    text-decoration: none;
+    transition: ease-in-out 300ms;
+}
+
+.circle:hover{
+    color: hsl(224, 93%, 58%);
+    border-color: hsl(224, 93%, 58%);
+    transition: ease-in-out 300ms;
+}
+
+.footer-logo{
+    margin-bottom: 30px;
+}
+
+footer p{
+    color: white;
+    text-align: right;
+}
+
+.name{
+    text-decoration: none;
+    color: hsl(224, 93%, 58%);
+}
+
+@media screen and (max-width: 768px) {
+
+    /* body {
+        text-align: center;
+    } */
+
+    nav {
+        margin: 30px 0 100px 0;
+    }
+
+    nav ul li{
+        margin-left: 20px;
+        font-weight: 700;
+    }   
+
+    .logo{
+        max-width: 30%;
+    }
+        
+    /*Form section*/   
+    form{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    button{
+     margin-left: 0;
+     margin-top: 20px;
+    }
+        /*END Form section*/
+
+    .flex{
+        flex-direction: column;
+    }
+    
+            /*Header*/
+    .reverse-section{
+        flex-direction: column-reverse;
+    }
+
+    .content{
+        margin-top: 80px;
+        text-align: center;
+    }
+
+    .content .left{
+        text-align: left;
+    }
+            /*END Header*/
+    .flex > div{
+        width: 100%;
+    }
+
+    .flex img{
+        margin-top: 0;
+    }
+
+    .flex > div:first-child{
+        margin-right: 0;
+    }
+    
+    .flex > div:last-child{
+        margin-left: 0;
+    }
+
+    .light-blueish::before{
+        content: '';
+        background-image: url(images/bg-curve-mobile.svg);
+        height: 100px;
+        background-position: center center;
+    }
+
+    .testimonial-box{
+        text-align: left;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .testimonial-box .quotes{
+        width: 4%;
+    }
+
+    .blueish form input{
+        flex: 1;     
+    }
+
+    .blueish form button{
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    footer ul{
+        padding: 0;
+        width: 100%;
+    }
+
+   ul, .footer-text{
+        display: flex;
+        flex-direction: column;
+    }
+    }
+
+    footer p{
+        text-align: center;
+    }
+
 }
