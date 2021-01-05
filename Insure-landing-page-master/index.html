@@ -8,6 +8,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 
   <title>Frontend Mentor | Insure landing page</title>
 
@@ -18,10 +19,16 @@
   <nav>
     <div class="container">
       <div class="flex">
-        <div>
+        <div class="img-wrapper">
           <img class="logo" src="images/logo.svg" alt="logo-image">
         </div>
-        <ul>
+
+        <button class="hamburger" id="hamburger">
+          <img class="open" src="images/icon-hamburger.svg" alt="hamburger">
+          <img class="close" src="images/icon-close.svg" alt="icon-close">
+        </button>
+
+        <ul id="mobilemenu">
           <li><a href="#">How we work</a></li>
           <li><a href="#">Blog</a></li>
           <li><a href="#">Account</a></li>
@@ -33,9 +40,9 @@
 
   <header>
     <div class="container">
-      <div class="flex align-start">
+      <div class="flex align-start reverse-mobile">
         <div>
-          <h1 class="line-top">Humanizing your insurance.</h1>
+          <h1 class="line-top-top">Humanizing your insurance.</h1>
           <p>Get your life insurance coverage easier and faster. We blend our expertise
             and technology to help you find the plan that’s right for you. Ensure you
             and your loved ones are protected.</p>
@@ -98,11 +105,12 @@
         </div>
 
         <ul class="flex">
-          <li><a href="#"><img src="images/icon-facebook.svg" alt="facebook"></a></li>
+          <li><a class="social" href="#"><img src="images/icon-facebook.svg" alt="facebook"></a></li>
           <li><a href="#"><img src="images/icon-twitter.svg" alt="twitter"></a></li>
           <li><a href="#"><img src="images/icon-pinterest.svg" alt="pinterest"></a></li>
           <li><a href="#"><img src="images/icon-instagram.svg" alt="instagram"></a></li>
         </ul>
+
       </div>
 
       <div class="flex align-start">
@@ -144,13 +152,12 @@
           </ul>
         </div>
       </div>
+      <div class="personal">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by Ivan Georgiev.
+      </div>
     </div>
   </footer>
-
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by Ivan Georgiev.
-  </div>
 
 </body>
 
