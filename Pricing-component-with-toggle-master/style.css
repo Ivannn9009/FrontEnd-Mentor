@@ -18,11 +18,14 @@ body{
     text-align: center;
     background-color: var(--Very-Light-Grayish-Blue);
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    margin: 0;
+    margin: 0; 
 }
 
-body::after{
+ body::after{
     content: '';
     background-image: url(images/bg-top.svg);
     position: absolute;
@@ -32,6 +35,8 @@ body::after{
     right: 0;
     height: 100%;
     width: 100%;
+    color: var(--Dark-Grayish-Blue);
+    z-index: -1;
 }
 
 body::before{
@@ -44,7 +49,12 @@ body::before{
     left: 0;
     height: 100%;
     width: 100%;
-}
+    z-index: -1;
+} 
+
+h1{
+    color: var(--Grayish-Blue);
+} 
 
 .container{
     padding: 20px;
@@ -57,4 +67,78 @@ body::before{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.toggle-container{
+    color: var(--Light-Grayish-Blue);
+    margin-bottom: 40px;
+}
+
+.price-box{
+      border-radius: 10px;
+      background-color: white;
+      padding: 30px;
+      margin: 10px;
+      box-shadow:  0px 5px 10px rgba(0,0,0,0.1);
+}
+
+.price-box.price-box-premium{
+    background-image: linear-gradient(to bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+    transform: scale(1.15);
+}
+
+.price-box.price-box-premium > *{
+    transform: scale(0.869);
+}
+
+
+.price-box h4{
+    margin: 0;
+}
+
+.price-box p{
+    font-size: 4em;
+    margin: 20px;
+    color: var(--Dark-Grayish-BlueGrayish-Blue);
+}
+
+.price-box ul{
+    padding: 0;
+    font-size: 14px;
+    list-style-type: none;
+    border-top: 1px solid var(--Light-Grayish-Blue);
+}
+
+.price-box ul li{
+    padding: 15px 0;
+    font-size: 14px;
+    border-bottom: 1px solid var(--Light-Grayish-Blue);
+}
+
+.price-box button{
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border: none;
+    border-radius: 5px;
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 15px;
+    margin-top: 10px;
+    color: white;
+    width: 100%;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.price-box.price-box-premium button{
+    background-image: none;
+    background-color: white;
+    color: hsl(237, 63%, 64%);
+}
+
+.price-box.price-box-premium ul,
+.price-box.price-box-premium li{
+    border-color: white;
 }
