@@ -17,11 +17,9 @@ body{
     font-size: 15px;
     text-align: center;
     background-color: var(--Very-Light-Grayish-Blue);
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     margin: 0; 
 }
 
@@ -101,7 +99,21 @@ h1{
     font-size: 4em;
     margin: 20px;
     color: var(--Dark-Grayish-BlueGrayish-Blue);
+    width: 250px;
 }
+
+.price-box .monthly{
+    display: none;
+}
+
+.show-monthly .price-box .monthly{
+    display: block;   
+}
+
+.show-monthly .price-box .annually{
+    display: none;
+}
+
 
 .price-box ul{
     padding: 0;
@@ -130,15 +142,104 @@ h1{
     width: 100%;
     font-weight: 700;
     cursor: pointer;
+    outline: none;
 }
 
 .price-box.price-box-premium button{
     background-image: none;
     background-color: white;
     color: hsl(237, 63%, 64%);
+    outline: none;
 }
 
 .price-box.price-box-premium ul,
 .price-box.price-box-premium li{
     border-color: white;
+}
+
+/*Pill toggle*/
+
+.toggle-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle-container label{
+    display: inline-block; 
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));;
+    height: 30px;
+    width: 60px;
+    margin: 0 30px;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggle-container label .ball{
+    position: absolute;
+    top: 2.5px;
+    left: 2.5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+    transition: transform 300ms ease-in-out;
+}
+
+.toggle-container input{
+    position: absolute;
+    left: -9999px;
+}
+
+.toggle-container input:checked + label .ball{
+    transform: translateX(30px);
+    /* left: auto;
+    right: 2.5px; */
+}
+
+@media screen and (max-width: 1120px){
+    .price-box.price-box-premium{
+        background-image: linear-gradient(to bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+        color: white;
+        transform: scale(1);
+    }
+    
+    .price-box.price-box-premium > *{
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 1108px){
+    .flex{
+        flex-direction: column;
+    }
+
+    .price-box.price-box-premium{
+        transform: scale(1);
+    }
+
+    .price-box.price-box-premium > *{
+        transform: scale(1);
+    }
+
+    @media screen and (max-width: 968px){
+
+    body::after{
+        content: '';
+        background-image: url(images/bg-top.svg);
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: top right;
+        top: 0;
+        left: 200px;
+        height: 100%;
+        width: 100%;
+        color: var(--Dark-Grayish-Blue);
+        z-index: -1;
+    }
+
+    body::before{
+        display: none;
+    } 
 }
