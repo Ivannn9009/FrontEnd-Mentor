@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap');
+
+:root{
+    --Red: hsl(0, 100%, 68%);
+    --Very-Dark-Blue: hsl(230, 29%, 20%);
+    --Dark-Grayish-Blue: hsl(230, 11%, 40%);
+    --Grayish-Blue: hsl(231, 7%, 65%);
+    --Light-Grayish-Blue: hsl(207, 33%, 95%);
+}
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    background-color: white;
+    color: var(--Very-Dark-Blue);
+}
+
+h1, h3, button, nav a{
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+h1{
+    font-size: 5em;
+    margin: 0;
+    line-height: 1;
+}
+
+h3{
+    color: var(--Grayish-Blue);
+    font-size: 400;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 1.2em;
+}
+
+h3 span{
+    background-color: var(--Very-Dark-Blue);
+    color: white;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+p{
+    color: var(--Dark-Grayish-BlueGrayish-Blue);
+    font-size: 1.2em;
+}
+
+button{
+    background-color: var(--Red);
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+img{
+    max-width: 100%;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1200px;
+}
+
+.container > div{
+    flex: 1;
+}
+
+nav{
+    margin: 40px 0;
+}
+
+nav ul{
+display: flex;
+padding: 0;
+list-style-type: none;
+}
+
+nav ul li{
+    margin-left: 40px;
+}
+
+nav ul li a{
+    color: var(--Very-Dark-Blue);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+main{
+
+}
