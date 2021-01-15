@@ -42,7 +42,8 @@ h3 span{
     background-color: var(--Very-Dark-Blue);
     color: white;
     border-radius: 20px;
-    padding: 5px 15px;
+    padding: 5px 15px; 
+    margin-right: 10px;
 }
 
 p{
@@ -55,12 +56,14 @@ button{
     font-size: 1em;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 15px 30px;
     color: white;
+    margin-right: 20px;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     cursor: pointer;
+    outline: none;
 }
 
 img{
@@ -77,11 +80,21 @@ img{
 }
 
 .container > div{
-    flex: 1;
+    flex: 0.8;
+}
+
+.container > div:first-child{
+    flex: 1.2;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
 }
 
 nav{
-    margin: 40px 0;
+    margin: 40px 0 100px 0;
 }
 
 nav ul{
@@ -101,6 +114,8 @@ nav ul li a{
     text-decoration: none;
 }
 
-main{
 
+
+.illustration{
+    transform: scale(2) translateX(25%);
 }
