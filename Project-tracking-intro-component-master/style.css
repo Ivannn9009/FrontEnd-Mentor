@@ -9,7 +9,7 @@
 }
 
 *{
-    box-sizing: border-box;
+    box-sizing: border-box; 
 }
 
 body{
@@ -63,7 +63,7 @@ p{
     font-size: 1.2em;
 }
 
-button{
+.btn{
     background-color: var(--Red);
     font-size: 1em;
     border: none;
@@ -108,6 +108,10 @@ img{
 
 nav{
     margin: 40px 0 100px 0;
+}
+
+.hamburger{
+    display: none;
 }
 
 nav ul{
@@ -159,18 +163,84 @@ footer p{
 }
 
 @media screen and (max-width: 768px){
+
     body{
         font-size: 1em;
     }
+
     body::after{
         height: 70vh;
     }
+
     h1{
         font-size: 4em;
     }
+
+    .hamburger{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        display: block;
+        padding: 0;
+    }
+
+    .icon-close{
+        display: none;
+    }
+
+    .show-nav .icon-close{
+        display: block;
+    }
+
+    .show-nav .icon-hamburger{
+        display: none;
+    }
+
+    ul{
+        background-color: #fff;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        left: 20px;
+        width: calc(100% - 40px);
+        transform: translateX(120%);
+        z-index: 100;
+        transition: transform 0.4s ease;
+    }
+
+    .show-nav ul{
+        transform: translateX(0);
+    }
+
+    ul li{
+        margin: 20px 30px;
+        text-align: center;
+    }
+
+    ul li.special{
+        margin: 40px 30px 20px;
+    }
+
+    ul li.special::before{
+        width: 100%;
+        height: 1px;
+        border-radius: 0;
+        top: 0;
+        left: 0;
+        opacity: 0.4;
+        transform: translate(0, -20px);
+    }
+
+    ul li a{
+        font-size: 1.5em;
+    }
+
     .mobile-reverse{
         flex-direction: column-reverse;
     }
+
 
     .flex{
         margin-top: 30px;
@@ -180,6 +250,7 @@ footer p{
         transform: scale(1.4) translateX(15%);
         margin-bottom: 120px;
     }
+
     button{
         font-size: 0.8em;
         padding: 10px 20px;
@@ -188,6 +259,7 @@ footer p{
     h3{
         font-size: 1em;
     }
+
     footer p{
         text-align: center;
         margin-top: 30px;
